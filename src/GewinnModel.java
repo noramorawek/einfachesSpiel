@@ -36,7 +36,7 @@ public class GewinnModel {
             this.gesamtPunkte += 5;
         }else {
             this.rundenErgebnis = -10;
-            this.gesamtPunkte -= 20;
+            this.gesamtPunkte -= 10;
         }
     }
 
