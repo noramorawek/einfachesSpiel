@@ -24,7 +24,7 @@ public class GewinnView extends JFrame {
         setLayout(new BorderLayout(10, 10));
         ((JComponent) getContentPane()).setBorder(
                 BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        JPanel infoPanel = new JPanel(new GridLayout(2, 2, 10, 5));
+        JPanel infoPanel = new JPanel(new GridLayout(3, 2, 10, 5));
 
         JLabel headerRunde = new JLabel("Rundenergebnis:");
         JLabel headerPunkte = new JLabel("Gesamtpunkte:");
@@ -41,15 +41,15 @@ public class GewinnView extends JFrame {
         lblGesamtpunkte.setOpaque(true);
         lblGesamtpunkte.setBackground(Color.WHITE);
 
-        infoPanel.add(lblRundenergebnis);
-        infoPanel.add(lblGesamtpunkte);
-
-        JPanel eingabePanel = new JPanel(new GridLayout(2, 2, 10, 5));
-
         JLabel headerSpieler = new JLabel("Deine Zahl:");
         JLabel headerComputer = new JLabel("Computer:");
-        eingabePanel.add(headerSpieler);
-        eingabePanel.add(headerComputer);
+
+        infoPanel.add(lblRundenergebnis);
+        infoPanel.add(lblGesamtpunkte);
+        infoPanel.add(headerComputer);
+        infoPanel.add(headerSpieler);
+
+        JPanel eingabePanel = new JPanel(new GridLayout(1, 2, 10, 5));
 
         txtSpielerZahl = new JTextField();
         txtSpielerZahl.setHorizontalAlignment(JTextField.CENTER);
