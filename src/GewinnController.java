@@ -14,6 +14,7 @@ public class GewinnController {
     private class SpielerZahlListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            // grewaehlte Zahl
             int spielerZahl;
             try {
                 spielerZahl = Integer.parseInt(view.getSpielerZahl());
