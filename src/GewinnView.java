@@ -76,4 +76,39 @@ public class GewinnView extends JFrame {
         buttonPanel.add(btnNochEinmal);
         add(buttonPanel, BorderLayout.SOUTH);
     }
+
+
+    public String getSpielerZahl() {
+        return txtSpielerZahl.getText();
+    }
+
+    public void zeigeComputerZahl(int zahl) {
+        txtComputerZahl.setText(String.valueOf(zahl));
+    }
+
+    public void zeigeRundenErgebnis(int ergebnis) {
+        String text = ergebnis > 0 ? "+" + ergebnis : String.valueOf(ergebnis);
+        lblRundenergebnis.setText(text);
+    }
+
+    public void zeigeGesamtPunkte(int punkte) {
+        lblGesamtpunkte.setText(String.valueOf(punkte));
+    }
+
+    public void zeigeGewonnen() {
+        lblRundenergebnis.setText("Gewonnen!");
+    }
+
+    public void zeigeVerloren() {
+        lblRundenergebnis.setText("Verloren");
+    }
+
+    public void zurueckSetzen() {
+        txtSpielerZahl.setText("");
+        txtComputerZahl.setText("");
+        lblRundenergebnis.setText("Tippe eine Zahl von 1 bis 9");
+        txtSpielerZahl.setEditable(true);
+        txtSpielerZahl.requestFocus();
+        btnNochEinmal.setEnabled(false);
+    }
 }
