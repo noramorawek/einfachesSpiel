@@ -15,6 +15,7 @@ public class GewinnController {
         @Override
         public void actionPerformed(ActionEvent e) {
             // grewaehlte Zahl
+            //Anderer Commit
             int spielerZahl;
             try {
                 spielerZahl = Integer.parseInt(view.getSpielerZahl());
