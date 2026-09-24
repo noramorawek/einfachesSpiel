@@ -12,7 +12,7 @@ public class GewinnView extends JFrame {
 
     public GewinnView() {
         super("Zahlen-Gewinnspiel (v1.0)");
-        initComponents();
+        start();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
@@ -20,7 +20,7 @@ public class GewinnView extends JFrame {
         setVisible(true);
     }
 
-    private void initComponents() {
+    private void start() {
         setLayout(new BorderLayout(10, 10));
         ((JComponent) getContentPane()).setBorder(
                 BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -116,6 +116,15 @@ public class GewinnView extends JFrame {
     public void rundeGespielt() {
         txtSpielerZahl.setEditable(false);
         btnNochEinmal.setEnabled(true);
+    }
+
+
+    public void setErgebnisFarbe(Color farbe) {
+        lblRundenergebnis.setBackground(farbe);
+    }
+
+    public void setPunkteFarbe(Color farbe) {
+        lblGesamtpunkte.setBackground(farbe);
     }
 
 
