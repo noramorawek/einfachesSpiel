@@ -72,6 +72,7 @@ public class GewinnView extends JFrame {
         add(zentrum, BorderLayout.CENTER);
 
         btnNochEinmal = new JButton("Noch einmal!");
+        btnNochEinmal.setEnabled(false);
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(btnNochEinmal);
         add(buttonPanel, BorderLayout.SOUTH);
@@ -110,6 +111,11 @@ public class GewinnView extends JFrame {
         txtSpielerZahl.setEditable(true);
         txtSpielerZahl.requestFocus();
         btnNochEinmal.setEnabled(false);
+    }
+
+    public void rundeGespielt() {
+        txtSpielerZahl.setEditable(false);
+        btnNochEinmal.setEnabled(true);
     }
 
 
