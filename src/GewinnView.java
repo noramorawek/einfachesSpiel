@@ -111,4 +111,13 @@ public class GewinnView extends JFrame {
         txtSpielerZahl.requestFocus();
         btnNochEinmal.setEnabled(false);
     }
+
+
+    public void addSpielerZahlListener(ActionListener l) {
+        txtSpielerZahl.addActionListener(l);
+    }
+
+    public void addNochEinmalListener(ActionListener l) {
+        btnNochEinmal.addActionListener(l);
+    }
 }
