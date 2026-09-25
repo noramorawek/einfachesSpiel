@@ -46,8 +46,8 @@ public class GewinnView extends JFrame {
 
         infoPanel.add(lblRundenergebnis);
         infoPanel.add(lblGesamtpunkte);
-        infoPanel.add(headerComputer);
         infoPanel.add(headerSpieler);
+        infoPanel.add(headerComputer);
 
         JPanel eingabePanel = new JPanel(new GridLayout(1, 2, 10, 5));
 

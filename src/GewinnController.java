@@ -10,6 +10,9 @@ public class GewinnController {
     public GewinnController(GewinnModel model, GewinnView view) {
         this.model = model;
         this.view = view;
+
+        this.view.addSpielerZahlListener(new SpielerZahlListener());
+        this.view.addNochEinmalListener(new NochEinmalListener());
     }
     private class SpielerZahlListener implements ActionListener {
         @Override
@@ -33,6 +36,8 @@ public class GewinnController {
             view.zeigeComputerZahl(model.getComputerZahl());
             view.zeigeRundenErgebnis(model.getRundenErgebnis());
             view.zeigeGesamtPunkte(model.getGesamtPunkte());
+
+            view.rundeGespielt();
 
             if (model.hatGewonnen()) {
                 view.zeigeGewonnen();

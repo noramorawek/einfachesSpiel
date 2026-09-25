@@ -31,7 +31,7 @@ public class GewinnModel {
         if(spielerZahl == this.computerZahl){
             this.rundenErgebnis = 20;
             this.gesamtPunkte += 20;
-        } else if(spielerZahl -1 == this.computerZahl || spielerZahl<this.computerZahl){
+        } else if(spielerZahl -1 == this.computerZahl || spielerZahl+1 == this.computerZahl){
             this.rundenErgebnis = 5;
             this.gesamtPunkte += 5;
         }else {
